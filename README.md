@@ -1,4 +1,4 @@
-# PENTESTING_METHS
+# ANTI-FLUFF
 
 **Main view** (example: **Web Application Assessment** — *SQL Injection* check with **per-check fluffy vs exploitable %** in the header badge; sidebar lists the same mix per check):
 
