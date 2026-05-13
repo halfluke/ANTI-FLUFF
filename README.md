@@ -1,12 +1,12 @@
 # PENTESTING_METHS
 
-**Main view** (example: **Web Application Assessment** — *Injection Attacks* expanded in the sidebar; checks and subchecks in the detail panel):
+**Main view** (example: **Web Application Assessment** — *SQL Injection* check with **per-check fluffy vs exploitable %** in the header badge; sidebar lists the same mix per check):
 
-![Main view with methodology sections and checks](docs/readme-main-view.png)
+![Main view with percentage mix badges on checks](docs/readme-main-view.png)
 
-**Admin panel** (import/export, clear local override, methodology editor; **Write package-state.json** appears only when running `npm run dev`):
+**Admin panel** (methodology/section/check editor with **fluffy vs exploitable** slider and bar under *Add Check*; **Write package-state.json** only in `npm run dev`):
 
-![Admin panel with toolbar and methodology tree](docs/readme-admin-panel.png)
+![Admin panel with mix editor and export toolbar](docs/readme-admin-panel.png)
 
 **ANTI-FLUFF** lives in **`pentest-checklist/`** — a React + TypeScript + Vite app for penetration-test methodology checklists (sections, checks, subchecks). Each check is tagged **fluffy** or **exploitable** so you can separate low-signal items from work where impact is easier to show.
 
