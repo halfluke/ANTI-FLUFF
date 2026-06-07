@@ -29,6 +29,30 @@ pnpm run dev    # open the URL Vite prints (often http://localhost:5173)
 
 **Also:** `pnpm run build` → `dist/`, `pnpm run preview` (try the build locally), `pnpm run test`, `pnpm run lint`.
 
+## Updating pnpm
+
+This repo pins pnpm in **`pentest-checklist/package.json`** (`"packageManager": "pnpm@…"`). Use the same major version locally when working here.
+
+**Global install (standalone, `PNPM_HOME`):** update the CLI from outside the project (e.g. `cd ~`):
+
+```bash
+pnpm self-update              # latest
+pnpm self-update 11.6.0       # specific version
+```
+
+Do **not** use `pnpm add -g pnpm` — pnpm directs you to `self-update` instead.
+
+**Inside `pentest-checklist/`:** `pnpm self-update` only updates the **`packageManager`** pin in `package.json`, not your global binary. After bumping the pin:
+
+```bash
+pnpm install
+pnpm run lint && pnpm run build && pnpm run test
+```
+
+Commit the `package.json` change (and lockfile if it changed).
+
+Fresh install alternative: `curl -fsSL https://get.pnpm.io/install.sh | sh -` (or set `PNPM_VERSION=…` before the script for a specific release).
+
 ## Deploy (static `dist/`)
 
 ```bash
